@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const user = require("./routes/vitaRoute");
+const admin = require("./admin/routes/vitaRoute");
 
 const app = express();
 
@@ -20,4 +20,4 @@ mongoose
     console.log(err);
   });
 
-app.use("/user", user);
+app.use("/admin", admin);
