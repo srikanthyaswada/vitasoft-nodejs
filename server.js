@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const admin = require("./admin/routes/vitaRoute");
+const adminRoute = require("./admin/routes/vitaRoute");
+const userRoute = require("./user/routes/userRoute");
 
 const app = express();
 
@@ -20,4 +21,5 @@ mongoose
     console.log(err);
   });
 
-app.use("/admin", admin);
+app.use("/admin", adminRoute);
+app.use("/user", userRoute);
